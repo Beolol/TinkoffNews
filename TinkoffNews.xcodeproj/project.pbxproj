@@ -20,6 +20,7 @@
 		CEB697BA1F258268001CF26C /* NewsDescriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB697B91F258268001CF26C /* NewsDescriptionData.swift */; };
 		CEB697BE1F25A485001CF26C /* NewsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB697BD1F25A485001CF26C /* NewsDescriptionViewController.swift */; };
 		CEB697C41F25B5CF001CF26C /* String+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB697C31F25B5CF001CF26C /* String+html.swift */; };
+		CEB697C61F25BCF6001CF26C /* Date+Milliseconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB697C51F25BCF6001CF26C /* Date+Milliseconds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CEB697B91F258268001CF26C /* NewsDescriptionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDescriptionData.swift; sourceTree = "<group>"; };
 		CEB697BD1F25A485001CF26C /* NewsDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDescriptionViewController.swift; sourceTree = "<group>"; };
 		CEB697C31F25B5CF001CF26C /* String+html.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+html.swift"; sourceTree = "<group>"; };
+		CEB697C51F25BCF6001CF26C /* Date+Milliseconds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Milliseconds.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB697C31F25B5CF001CF26C /* String+html.swift */,
+				CEB697C51F25BCF6001CF26C /* Date+Milliseconds.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				CEB697BE1F25A485001CF26C /* NewsDescriptionViewController.swift in Sources */,
 				CEB697C41F25B5CF001CF26C /* String+html.swift in Sources */,
 				CEB697891F24E19F001CF26C /* TinkoffNews.xcdatamodeld in Sources */,
+				CEB697C61F25BCF6001CF26C /* Date+Milliseconds.swift in Sources */,
 				CEB6979A1F250CEA001CF26C /* DataManager.swift in Sources */,
 				CEB6979C1F254E61001CF26C /* NewsData.swift in Sources */,
 				CEB697831F24E19F001CF26C /* NewsViewController.swift in Sources */,
@@ -368,6 +372,7 @@
 				CEB697941F24E1A0001CF26C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

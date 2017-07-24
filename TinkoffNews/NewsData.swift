@@ -13,6 +13,6 @@ struct NewsData {
     let id: String
     let name: String
     let text: String
-    let pubDate: UIntMax    
+    let pubDate: Date
     
 }

@@ -61,7 +61,7 @@ class NewsViewController: UIViewController {
     private func updateUI() {
         if let context = container?.viewContext {
             let request: NSFetchRequest<News> = News.fetchRequest()
-            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
             fetchedResultsController = NSFetchedResultsController<News> (
                 fetchRequest: request,
                 managedObjectContext: context,

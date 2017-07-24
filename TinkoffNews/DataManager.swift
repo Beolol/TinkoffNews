@@ -51,7 +51,7 @@ class DataManager: NSObject {
             var id: String?
             var name: String?
             var text: String?
-            var pubDate: UIntMax?
+            var pubDate: Date?
             
             if let theId = payload["id"] as? String {
                 id = theId
@@ -64,7 +64,7 @@ class DataManager: NSObject {
             }
             if let publicationDate = payload["publicationDate"] as? [String:Any] {
                 if let thePubDate = publicationDate["milliseconds"] as? UIntMax {
-                    pubDate = thePubDate
+                    pubDate = Date(milliseconds: thePubDate)
                 }
             }
             

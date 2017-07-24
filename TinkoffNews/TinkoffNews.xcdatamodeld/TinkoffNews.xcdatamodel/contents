@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="News" representedClassName="News" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
@@ -12,7 +12,7 @@
         <relationship name="news" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="newsDescription" inverseEntity="News" syncable="YES"/>
     </entity>
     <elements>
-        <element name="News" positionX="-3897" positionY="-648" width="128" height="118"/>
+        <element name="News" positionX="-3897" positionY="-648" width="128" height="120"/>
         <element name="NewsDescription" positionX="-3737" positionY="-648" width="128" height="73"/>
     </elements>
 </model>

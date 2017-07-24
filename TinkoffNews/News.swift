@@ -29,7 +29,7 @@ extension News {
         news.id = newsInfo.id
         news.name = newsInfo.name
         news.text = newsInfo.text
-        news.date = Int64(newsInfo.pubDate)
+        news.date = newsInfo.pubDate as NSDate
         
         return news
     }
