@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hp7-MS-Hg5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hp7-MS-Hg5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="81" id="kYg-HK-rpu" customClass="NewsTableViewCell" customModule="TinkoffNews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kYg-HK-rpu" id="FqQ-K1-BUT">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="kYg-HK-rpu" id="FqQ-K1-BUT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--News Description View Controller-->
+        <!--News feed-->
         <scene sceneID="fza-fQ-tdJ">
             <objects>
                 <viewController id="TBc-lb-pJJ" customClass="NewsDescriptionViewController" customModule="TinkoffNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,50 +72,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1k-zn-zfh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gl0-01-jb5">
-                                        <rect key="frame" x="8" y="0.0" width="357" height="203"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="203" id="3MC-L3-Bza"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-W0-3DM">
-                                        <rect key="frame" x="162" y="308.5" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="CEL-xP-CSk"/>
-                                            <constraint firstAttribute="height" constant="50" id="Uuu-Kb-VCf"/>
-                                        </constraints>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="gl0-01-jb5" secondAttribute="bottom" constant="521" id="1XT-fJ-2iy"/>
-                                    <constraint firstAttribute="trailing" secondItem="gl0-01-jb5" secondAttribute="trailing" constant="8" id="2xt-rW-OXs"/>
-                                    <constraint firstItem="PTp-W0-3DM" firstAttribute="centerY" secondItem="m1k-zn-zfh" secondAttribute="centerY" id="56H-bi-sbw"/>
-                                    <constraint firstItem="gl0-01-jb5" firstAttribute="leading" secondItem="m1k-zn-zfh" secondAttribute="leading" constant="8" id="6bY-3g-0nA"/>
-                                    <constraint firstItem="PTp-W0-3DM" firstAttribute="centerX" secondItem="m1k-zn-zfh" secondAttribute="centerX" id="9xh-R0-rGQ"/>
-                                    <constraint firstItem="gl0-01-jb5" firstAttribute="top" secondItem="m1k-zn-zfh" secondAttribute="top" id="sBP-wT-9rf"/>
-                                </constraints>
-                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gl0-01-jb5">
+                                <rect key="frame" x="8" y="4" width="359" height="655"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-W0-3DM">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="m1k-zn-zfh" secondAttribute="trailing" id="128-6v-vw8"/>
-                            <constraint firstItem="gl0-01-jb5" firstAttribute="width" secondItem="KOp-gZ-xJt" secondAttribute="width" constant="-18" id="AnP-ic-V2n"/>
-                            <constraint firstItem="xj4-f7-Ecf" firstAttribute="top" secondItem="m1k-zn-zfh" secondAttribute="bottom" id="Max-Zd-9sH"/>
-                            <constraint firstItem="m1k-zn-zfh" firstAttribute="top" secondItem="KOp-gZ-xJt" secondAttribute="top" id="V9S-kM-5IH"/>
-                            <constraint firstItem="m1k-zn-zfh" firstAttribute="leading" secondItem="KOp-gZ-xJt" secondAttribute="leading" id="hVm-om-tb9"/>
+                            <constraint firstAttribute="trailing" secondItem="gl0-01-jb5" secondAttribute="trailing" constant="8" id="4jg-DI-xmB"/>
+                            <constraint firstItem="PTp-W0-3DM" firstAttribute="centerX" secondItem="KOp-gZ-xJt" secondAttribute="centerX" id="7Fp-NT-Uok"/>
+                            <constraint firstItem="gl0-01-jb5" firstAttribute="leading" secondItem="KOp-gZ-xJt" secondAttribute="leading" constant="8" id="ADg-s3-8w5"/>
+                            <constraint firstItem="xj4-f7-Ecf" firstAttribute="top" secondItem="gl0-01-jb5" secondAttribute="bottom" constant="8" id="I7J-or-ASs"/>
+                            <constraint firstItem="PTp-W0-3DM" firstAttribute="centerY" secondItem="KOp-gZ-xJt" secondAttribute="centerY" id="IPe-ha-OXo"/>
+                            <constraint firstItem="gl0-01-jb5" firstAttribute="top" secondItem="Dy6-dQ-oI2" secondAttribute="bottom" constant="-60" id="qoA-xp-7JH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="News feed" id="7h7-LC-dmX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="X29-aD-0Cy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="downloadIndicator" destination="PTp-W0-3DM" id="BvV-ZY-osW"/>
                         <outlet property="newsTextView" destination="gl0-01-jb5" id="YoG-Td-OF8"/>
-                        <outlet property="newsTextViewHeight" destination="3MC-L3-Bza" id="MhP-Hm-M0Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8t-0q-60A" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -38,9 +38,10 @@ class NewsViewController: UIViewController {
         
         fetchedResultsController?.delegate = self
         isLoading = true
-        DataManager.manager.getNews(completionHandler: { [weak self] in
-    
-            self?.isLoading = false
+        DataManager.manager.updateNews(completionHandler: { [unowned self] in
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.isLoading = false
         })
         
     }
@@ -51,10 +52,10 @@ class NewsViewController: UIViewController {
         }
         isLoading = true
         refreshControl.beginRefreshing()
-        DataManager.manager.getNews(completionHandler: { [weak self] in
-            
-            self?.isLoading = false
-            self?.refreshControl.endRefreshing()
+        DataManager.manager.updateNews(completionHandler: { [unowned self] in
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.isLoading = false
         })
     }
     
@@ -99,7 +100,6 @@ extension NewsViewController : NSFetchedResultsControllerDelegate {
         case .move:
             tableView.deleteRows(at: [indexPath!], with: .fade)
             tableView.insertRows(at: [newIndexPath!], with: .fade)
-
         }
     }
     

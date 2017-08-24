@@ -20,12 +20,14 @@ class DataManager: NSObject {
     private var newsUpdated: (() -> Void)?
     
     // MARK:  - News download
-    public func getNews(completionHandler: @escaping () -> Void) {
+    public func updateNews(completionHandler: @escaping () -> Void) {
         
-        let url = URL(string: newsUrlString)
+      DispatchQueue.global(qos: .background).async { [unowned self] in
+        let url = URL(string: self.newsUrlString)
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
             if error != nil {
                 print(error ?? "error")
+                completionHandler()
             } else {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
@@ -38,10 +40,11 @@ class DataManager: NSObject {
                     
                 } catch let error as NSError {
                     print(error)
+                    completionHandler()
                 }
             }
-            
-            }.resume()
+        }.resume()
+      }
     }
     
     fileprivate func parsePayload(_ payloads: [[String:Any]]) -> [NewsData] {
@@ -97,8 +100,8 @@ class DataManager: NSObject {
     // MARK: - Description news download
     
     public func getDescriptionNewsWithId(_ id: String, completionHandler: @escaping (String) -> Void) {
-        
-        let url = URL(string: descriptionNewsUrlString + id)
+      DispatchQueue.global(qos: .background).async { [unowned self] in
+        let url = URL(string: self.descriptionNewsUrlString + id)
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
             if error != nil {
                 print(error ?? "error")
@@ -108,7 +111,7 @@ class DataManager: NSObject {
                     if let payload = json["payload"] as? [String:Any] {
                         if let content = (payload["content"] as? String)?.html2String {
                             
-                            DispatchQueue.main.sync {
+                            DispatchQueue.main.async {
                                 completionHandler(content)
                             }
                         }
@@ -118,7 +121,7 @@ class DataManager: NSObject {
                     print(error)
                 }
             }
-            
-            }.resume()
+        }.resume()
+      }
     }
 }
